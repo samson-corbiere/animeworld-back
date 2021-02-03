@@ -1,1 +1,2 @@
 truncate anime;
+truncate actor;
