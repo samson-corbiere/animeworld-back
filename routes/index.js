@@ -1,7 +1,7 @@
-const consultants = require('./consultants');
+const anime = require('./anime');
 
 // eslint-disable-next-line
 module.exports = (app) => {
-  app.use('/consultants', consultants);
+  app.use('/anime', anime);
 
 };
