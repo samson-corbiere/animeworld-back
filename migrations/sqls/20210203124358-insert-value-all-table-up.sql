@@ -4,3 +4,15 @@ INSERT INTO `anime` (`name`, `author`, `description`, `genre`, `view`, `image`, 
 INSERT INTO `anime` (`name`, `author`, `description`, `genre`, `view`, `image`, `start_date`) VALUES ('Black Butler', 'Yana Toboso', "Le Comte Ciel Phantomhive est un aristocrate anglais du XIX e siècle au passé tourmenté. Entre les années 1888 et 1889, âgé de 12 ans et ayant perdu ses parents dans un incendie inexplicable, il se voit devenir l'héritier de l'entreprise de jouets et friandises Phantom.", 'action', '2000', 'https://images-na.ssl-images-amazon.com/images/I/814OLNRNsCL.jpg', '2008');
 INSERT INTO `anime` (`name`, `author`, `description`, `genre`, `view`, `image`, `start_date`) VALUES ('Osomatsu-san', 'Fujio Akatsuka', "L'anime suit la vie des six garçons de la famille Matsuno, des sextuplés ayant passé leur enfance à faire des bêtises et qui sont maintenant de jeunes adultes", 'comédie', '7000', 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUSVsMOC0KSDeUJ8hRDqXuydiNxRw4xXKG49GbjOG7Rsacahro', '2015');
 INSERT INTO `anime` (`name`, `author`, `description`, `genre`, `view`, `image`, `start_date`) VALUES ('Lucky Star', 'Toka Takei', "Lucky Star s'intéresse aux vies de plusieurs jeunes lycéennes japonaises, donnant une touche d'humour à leurs histoires. L'héroïne principale est Konata Izumi, une jeune fille sportive et intelligente qui, malgré ces qualités, ne fait pas partie d'un club sportif et a de mauvaises notes.", 'comédie', '3000', 'https://derf9v1xhwwx1.cloudfront.net/image/upload/oth/FunimationStoreFront/1422969/Japanese/1422969_Japanese_ContinueWatchingMobile_f5e26b4d-20ba-4f8b-8b6d-97fa26fc48ef.jpg', '2007');
+
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Yuki Kaji', 'https://cdn.myanimelist.net/images/voiceactors/2/54595.jpg');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Yui Ishikawa', 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_Ishikawa_Yui_%2843101892301%29.jpg');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Marina Inoue', 'https://static.wikia.nocookie.net/deadoralive/images/7/74/Marina_Inoue.png/revision/latest/top-crop/width/360/height/450?cb=20140530124709');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Hayao Miyazaki', 'https://lh3.googleusercontent.com/proxy/IPLH5t57QE7lxjf5aRPJcgvSDTEfXKx-oknwxlZYZLZ47TmGJVwY-Zy23kgR2EyKRB8IuoCO5FrpFRdMQQ47sx_pqqac12GaF_mtc5aOx1Hv6A0cv49uwgiPWZdNhJlgpU3zB5QTdeQeiLLoWcktdW9uOteX25YKJKy6rYgMDg');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Rio Suzuki', 'https://www.nautiljon.com/images/people/00/48/suzuki_rio_41284.jpg');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Hiroki Suzuki', 'https://www.nautiljon.com/images/people/00/06/suzuki_hiroki_1985_8060.jpg');
+INSERT INTO `actor` (`name`, `photo_url`) VALUES ('Naoya Uchida', 'https://alchetron.com/cdn/naoya-uchida-e41a1cef-15ca-44e0-8ca4-59731ae91d0-resize-750.gif');
+
+INSERT INTO `anime_has_actor` (`actor_id`, `anime_id`) VALUES (1, 2);
+INSERT INTO `anime_has_actor` (`actor_id`, `anime_id`) VALUES (2, 2);
+INSERT INTO `anime_has_actor` (`actor_id`, `anime_id`) VALUES (3, 2);

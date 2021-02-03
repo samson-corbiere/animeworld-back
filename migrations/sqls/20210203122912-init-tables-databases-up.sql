@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `anime` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `Actor` (
+CREATE TABLE IF NOT EXISTS `actor` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `photo_url` VARCHAR(255) NOT NULL,
@@ -18,13 +18,13 @@ CREATE TABLE IF NOT EXISTS `Actor` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `anime_has_actor` (
-  `Actor_id` INT NOT NULL,
+  `actor_id` INT NOT NULL,
   `anime_id` INT NOT NULL,
-  INDEX `fk_anime_has_actor_Actor_idx` (`Actor_id` ASC),
+  INDEX `fk_anime_has_actor_actor_idx` (`actor_id` ASC),
   INDEX `fk_anime_has_actor_anime1_idx` (`anime_id` ASC),
-  CONSTRAINT `fk_anime_has_actor_Actor`
-    FOREIGN KEY (`Actor_id`)
-    REFERENCES `Actor` (`id`)
+  CONSTRAINT `fk_anime_has_actor_actor`
+    FOREIGN KEY (`actor_id`)
+    REFERENCES `actor` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_anime_has_actor_anime1`
