@@ -33,8 +33,37 @@ router.get("/view", async (req, res) => {
 }
 });
 
+//find anime with action genre
+router.get("/actionGenre", async (req, res) => {
+    try {
+        const result = await connection.query(
+            `SELECT * FROM anime
+            where genre = "action"`
+    );
+    res.status(200).json({
+        result
+    })
+} catch(err) {
+    console.log(err);
+    res.status(500).send("error get animes with genre action")
+}
+});
 
-
+//find anime with comédie genre
+router.get("/comicGenre", async (req, res) => {
+    try {
+        const result = await connection.query(
+            `SELECT * FROM anime
+            where genre = "comédie"`
+    );
+    res.status(200).json({
+        result
+    })
+} catch(err) {
+    console.log(err);
+    res.status(500).send("error get animes with genre comédie")
+}
+});
 
 
 module.exports = router;
