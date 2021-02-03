@@ -5,10 +5,9 @@ const connection = require("../db");
 router.post("/", async (req,res) => {
   try {
     const {search} = req.body;
-    console.log(search)
     const result = await connection.query(
-      `SELECT Actor.* FROM Actor
-      JOIN anime_has_actor ON anime_has_actor.Actor_id = Actor.id
+      `SELECT actor.* FROM actor
+      JOIN anime_has_actor ON anime_has_actor.actor_id = actor.id
       JOIN anime ON anime.id = anime_has_actor.anime_id
       WHERE anime.id = ?`, [search]
     )
