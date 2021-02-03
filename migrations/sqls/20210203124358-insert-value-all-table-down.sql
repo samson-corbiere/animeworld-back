@@ -5,3 +5,4 @@ ALTER TABLE anime_has_actor DROP FOREIGN KEY fk_anime_has_actor_actor;
 
 truncate anime;
 truncate actor;
+truncate anime_has_actor
