@@ -2,14 +2,14 @@ const router = require("express").Router();
 const connection = require("../db");
 
 // search actor of an anime
-router.post("/", async (req,res) => {
+router.get("/:animeId", async (req,res) => {
   try {
-    const {search} = req.body;
+    const {animeId} = req.params;
     const result = await connection.query(
       `SELECT actor.* FROM actor
       JOIN anime_has_actor ON anime_has_actor.actor_id = actor.id
       JOIN anime ON anime.id = anime_has_actor.anime_id
-      WHERE anime.id = ?`, [search]
+      WHERE anime.id = ?`, [animeId]
     )
     res.status(200).json(result)
   } catch (err) {
